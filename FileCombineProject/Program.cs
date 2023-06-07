@@ -1,3 +1,5 @@
+using FileCombineProject.File_cleaner;
+
 namespace FileCombineProject
 {
     internal static class Program
