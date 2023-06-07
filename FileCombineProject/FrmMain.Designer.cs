@@ -28,56 +28,92 @@
         /// </summary>
         private void InitializeComponent()
         {
-            btnCleaner = new Button();
-            button1 = new Button();
-            button2 = new Button();
+            label1 = new Label();
+            label2 = new Label();
+            txtBoxLogin = new TextBox();
+            txtBoxPassword = new TextBox();
+            btnSignIn = new Button();
+            btnLogIn = new Button();
             SuspendLayout();
             // 
-            // btnCleaner
+            // label1
             // 
-            btnCleaner.Location = new Point(235, 105);
-            btnCleaner.Name = "btnCleaner";
-            btnCleaner.Size = new Size(288, 29);
-            btnCleaner.TabIndex = 0;
-            btnCleaner.Text = "FILE CLEANER";
-            btnCleaner.UseVisualStyleBackColor = true;
-            btnCleaner.Click += btnCleaner_Click;
+            label1.AutoSize = true;
+            label1.Location = new Point(173, 68);
+            label1.Name = "label1";
+            label1.Size = new Size(49, 20);
+            label1.TabIndex = 3;
+            label1.Text = "Login:";
             // 
-            // button1
+            // label2
             // 
-            button1.Location = new Point(235, 161);
-            button1.Name = "button1";
-            button1.Size = new Size(288, 29);
-            button1.TabIndex = 1;
-            button1.Text = "ARCHIVER";
-            button1.UseVisualStyleBackColor = true;
+            label2.AutoSize = true;
+            label2.Location = new Point(173, 148);
+            label2.Name = "label2";
+            label2.Size = new Size(73, 20);
+            label2.TabIndex = 4;
+            label2.Text = "Password:";
             // 
-            // button2
+            // txtBoxLogin
             // 
-            button2.Location = new Point(235, 223);
-            button2.Name = "button2";
-            button2.Size = new Size(288, 29);
-            button2.TabIndex = 2;
-            button2.Text = "RENAMER";
-            button2.UseVisualStyleBackColor = true;
+            txtBoxLogin.Location = new Point(173, 94);
+            txtBoxLogin.Name = "txtBoxLogin";
+            txtBoxLogin.Size = new Size(235, 27);
+            txtBoxLogin.TabIndex = 5;
+            txtBoxLogin.TextChanged += textBox1_TextChanged;
+            // 
+            // txtBoxPassword
+            // 
+            txtBoxPassword.Location = new Point(173, 171);
+            txtBoxPassword.Name = "txtBoxPassword";
+            txtBoxPassword.Size = new Size(235, 27);
+            txtBoxPassword.TabIndex = 6;
+            txtBoxPassword.TextChanged += textBox1_TextChanged;
+            // 
+            // btnSignIn
+            // 
+            btnSignIn.Location = new Point(12, 409);
+            btnSignIn.Name = "btnSignIn";
+            btnSignIn.Size = new Size(94, 29);
+            btnSignIn.TabIndex = 7;
+            btnSignIn.Text = "SIGN IN";
+            btnSignIn.UseVisualStyleBackColor = true;
+            btnSignIn.Click += btnSignIn_Click;
+            // 
+            // btnLogIn
+            // 
+            btnLogIn.Enabled = false;
+            btnLogIn.Location = new Point(173, 236);
+            btnLogIn.Name = "btnLogIn";
+            btnLogIn.Size = new Size(94, 29);
+            btnLogIn.TabIndex = 8;
+            btnLogIn.Text = "LOG IN";
+            btnLogIn.UseVisualStyleBackColor = true;
+            btnLogIn.Click += buttonLogIn_Click;
             // 
             // FrmMain
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(button2);
-            Controls.Add(button1);
-            Controls.Add(btnCleaner);
+            Controls.Add(btnLogIn);
+            Controls.Add(btnSignIn);
+            Controls.Add(txtBoxPassword);
+            Controls.Add(txtBoxLogin);
+            Controls.Add(label2);
+            Controls.Add(label1);
             Name = "FrmMain";
             Text = "Main menu";
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
-
-        private Button btnCleaner;
-        private Button button1;
-        private Button button2;
+        private Label label1;
+        private Label label2;
+        private TextBox txtBoxLogin;
+        private TextBox txtBoxPassword;
+        private Button btnSignIn;
+        private Button btnLogIn;
     }
 }
