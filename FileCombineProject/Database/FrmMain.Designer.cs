@@ -39,62 +39,71 @@
             // label1
             // 
             label1.AutoSize = true;
+            label1.Font = new Font("Sitka Display", 9F, FontStyle.Italic, GraphicsUnit.Point);
             label1.Location = new Point(173, 68);
             label1.Name = "label1";
-            label1.Size = new Size(49, 20);
+            label1.Size = new Size(48, 21);
             label1.TabIndex = 3;
             label1.Text = "Login:";
             // 
             // label2
             // 
             label2.AutoSize = true;
+            label2.Font = new Font("Sitka Display", 9F, FontStyle.Italic, GraphicsUnit.Point);
             label2.Location = new Point(173, 148);
             label2.Name = "label2";
-            label2.Size = new Size(73, 20);
+            label2.Size = new Size(72, 21);
             label2.TabIndex = 4;
             label2.Text = "Password:";
             // 
             // txtBoxLogin
             // 
+            txtBoxLogin.Font = new Font("Sitka Display", 9F, FontStyle.Italic, GraphicsUnit.Point);
             txtBoxLogin.Location = new Point(173, 94);
             txtBoxLogin.Name = "txtBoxLogin";
-            txtBoxLogin.Size = new Size(235, 27);
+            txtBoxLogin.Size = new Size(235, 26);
             txtBoxLogin.TabIndex = 5;
             txtBoxLogin.TextChanged += textBox1_TextChanged;
             // 
             // txtBoxPassword
             // 
+            txtBoxPassword.Font = new Font("Sitka Display", 9F, FontStyle.Italic, GraphicsUnit.Point);
             txtBoxPassword.Location = new Point(173, 171);
             txtBoxPassword.Name = "txtBoxPassword";
-            txtBoxPassword.Size = new Size(235, 27);
+            txtBoxPassword.Size = new Size(235, 26);
             txtBoxPassword.TabIndex = 6;
             txtBoxPassword.TextChanged += textBox1_TextChanged;
             // 
             // btnSignIn
             // 
+            btnSignIn.BackColor = Color.Green;
+            btnSignIn.Font = new Font("Sitka Display", 9F, FontStyle.Italic, GraphicsUnit.Point);
             btnSignIn.Location = new Point(12, 409);
             btnSignIn.Name = "btnSignIn";
             btnSignIn.Size = new Size(94, 29);
             btnSignIn.TabIndex = 7;
             btnSignIn.Text = "SIGN IN";
-            btnSignIn.UseVisualStyleBackColor = true;
+            btnSignIn.UseVisualStyleBackColor = false;
             btnSignIn.Click += btnSignIn_Click;
             // 
             // btnLogIn
             // 
+            btnLogIn.BackColor = Color.Green;
             btnLogIn.Enabled = false;
+            btnLogIn.Font = new Font("Sitka Display", 9F, FontStyle.Italic, GraphicsUnit.Point);
             btnLogIn.Location = new Point(173, 236);
             btnLogIn.Name = "btnLogIn";
             btnLogIn.Size = new Size(94, 29);
             btnLogIn.TabIndex = 8;
             btnLogIn.Text = "LOG IN";
-            btnLogIn.UseVisualStyleBackColor = true;
+            btnLogIn.UseVisualStyleBackColor = false;
             btnLogIn.Click += buttonLogIn_Click;
             // 
             // FrmMain
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = SystemColors.InactiveCaption;
             ClientSize = new Size(800, 450);
             Controls.Add(btnLogIn);
             Controls.Add(btnSignIn);

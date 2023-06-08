@@ -39,7 +39,7 @@ namespace FileCombineProject
 
                         if (login == txtBoxLogin.Text && password == txtBoxPassword.Text)
                         {
-                            MainMenu mainMenu = new MainMenu();
+                            FormMainMenu mainMenu = new FormMainMenu();
                             mainMenu.ShowDialog();
                         }
                     }
@@ -65,8 +65,9 @@ namespace FileCombineProject
 
         private void btnSignIn_Click(object sender, EventArgs e)
         {
-            SignIn signIn = new SignIn();
-            signIn.ShowDialog();         
+            FormSignIn signIn = new FormSignIn();
+            signIn.ShowDialog();
         }
+
     }
 }

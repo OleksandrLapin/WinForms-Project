@@ -13,6 +13,7 @@ namespace FileProcessor
         public string[] DirMasks { get; set; } = { };
         public string[] FileMasks { get; set; } = { };
         public ObjectContainer Container { get; set; } = new ObjectContainer();
+
         public Finder()
         {
             regexFileAnalyzer = new RegexFileAnalyzer();
@@ -33,17 +34,26 @@ namespace FileProcessor
             }
         }
 
+        public void FindFilesRecursive(string rootPath)
+        {
+            DirectoryInfo dir = new DirectoryInfo(rootPath);
+
+            DirectoryInfo[] NestedDirs = dir.GetDirectories();
+            FileInfo[] NestedFiles = dir.GetFiles();
+
+            Container.Files.AddRange(regexFileAnalyzer.AnalyzeFiles(NestedFiles, FileMasks));
+
+            foreach (DirectoryInfo d in NestedDirs)
+                FindFilesRecursive(d.FullName);
+        }
+
         public void FindFiles(string rootPath)
         {
             DirectoryInfo dir = new DirectoryInfo(rootPath);
 
-            DirectoryInfo[] dirs = dir.GetDirectories();
-            FileInfo[] files = dir.GetFiles();
+            FileInfo[] NestedFiles = dir.GetFiles();
 
-            Container.Files.AddRange(regexFileAnalyzer.AnalyzeFiles(files, FileMasks));
-
-            foreach (DirectoryInfo d in dirs)
-                FindFiles(d.FullName);
+            Container.Files.AddRange(regexFileAnalyzer.AnalyzeFiles(NestedFiles, FileMasks));
         }
 
         public void FindAll(string rootPath)

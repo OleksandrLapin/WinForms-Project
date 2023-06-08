@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace FileCombineProject
 {
-    public partial class SignIn : Form
+    public partial class FormSignIn : Form
     {
-        public SignIn()
+        public FormSignIn()
         {
             InitializeComponent();
         }

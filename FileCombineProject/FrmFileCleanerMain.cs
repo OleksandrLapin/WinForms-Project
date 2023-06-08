@@ -22,9 +22,9 @@ namespace FileCombineProject.File_cleaner
         public FrmFileCleanerMain()
         {
             InitializeComponent();
-            listViewMain.GridLines = true;
-            listViewMain.FullRowSelect = true;
-            listViewMain.Scrollable = true;
+            //listViewMain.GridLines = true;
+            //listViewMain.FullRowSelect = true;
+            //listViewMain.Scrollable = true;
         }
 
 
@@ -44,7 +44,7 @@ namespace FileCombineProject.File_cleaner
         {
             long size = 0;
 
-            listViewMain.Clear();
+            listViewMain.Items.Clear();
             finder.Container.Dirs.Clear();
             finder.Container.Files.Clear();
 
@@ -78,19 +78,20 @@ namespace FileCombineProject.File_cleaner
                 item.Tag = new DirectoryInfo(DirInfo.FullName);
                 item.ImageIndex = 1;
                 item.SubItems.Add(DirInfo.LastWriteTime.ToString());
-                
+
                 listViewMain.Items.Add(item);
             }
 
             foreach (FileInfo fileInfo in finder.Container.Files)
             {
                 ListViewItem item = new ListViewItem();
-                item.SubItems[0].Text = fileInfo.Name;            
+                item.SubItems[0].Text = fileInfo.Name;
                 item.SubItems.Add(fileInfo.LastWriteTime.ToString());
                 item.SubItems.Add((fileInfo.Length / 1024).ToString() + "Kb");
                 item.Tag = new FileInfo(fileInfo.FullName);
                 item.ImageIndex = 0;
 
+                size += fileInfo.Length;
                 listViewMain.Items.Add(item);
             }
 
@@ -155,5 +156,9 @@ namespace FileCombineProject.File_cleaner
             }
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

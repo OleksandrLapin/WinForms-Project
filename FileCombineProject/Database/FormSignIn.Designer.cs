@@ -1,6 +1,6 @@
 ﻿namespace FileCombineProject
 {
-    partial class SignIn
+    partial class FormSignIn
     {
         /// <summary>
         /// Required designer variable.
@@ -37,46 +37,52 @@
             // 
             // btnSignIn
             // 
+            btnSignIn.BackColor = Color.Green;
             btnSignIn.Enabled = false;
+            btnSignIn.Font = new Font("Sitka Display", 9F, FontStyle.Italic, GraphicsUnit.Point);
             btnSignIn.Location = new Point(338, 250);
             btnSignIn.Name = "btnSignIn";
             btnSignIn.Size = new Size(94, 29);
             btnSignIn.TabIndex = 0;
             btnSignIn.Text = "SIGN IN";
-            btnSignIn.UseVisualStyleBackColor = true;
+            btnSignIn.UseVisualStyleBackColor = false;
             btnSignIn.Click += btnSignIn_Click;
             // 
             // txtBoxLogin
             // 
+            txtBoxLogin.Font = new Font("Sitka Display", 9F, FontStyle.Italic, GraphicsUnit.Point);
             txtBoxLogin.Location = new Point(338, 104);
             txtBoxLogin.Name = "txtBoxLogin";
-            txtBoxLogin.Size = new Size(164, 27);
+            txtBoxLogin.Size = new Size(164, 26);
             txtBoxLogin.TabIndex = 1;
             txtBoxLogin.TextChanged += txtBoxLogin_TextChanged;
             // 
             // txtBoxPassword
             // 
+            txtBoxPassword.Font = new Font("Sitka Display", 9F, FontStyle.Italic, GraphicsUnit.Point);
             txtBoxPassword.Location = new Point(338, 195);
             txtBoxPassword.Name = "txtBoxPassword";
-            txtBoxPassword.Size = new Size(164, 27);
+            txtBoxPassword.Size = new Size(164, 26);
             txtBoxPassword.TabIndex = 2;
             txtBoxPassword.TextChanged += txtBoxLogin_TextChanged;
             // 
             // label1
             // 
             label1.AutoSize = true;
+            label1.Font = new Font("Sitka Display", 9F, FontStyle.Italic, GraphicsUnit.Point);
             label1.Location = new Point(338, 68);
             label1.Name = "label1";
-            label1.Size = new Size(109, 20);
+            label1.Size = new Size(103, 21);
             label1.TabIndex = 3;
             label1.Text = "Enter the login:";
             // 
             // label2
             // 
             label2.AutoSize = true;
+            label2.Font = new Font("Sitka Display", 9F, FontStyle.Italic, GraphicsUnit.Point);
             label2.Location = new Point(338, 149);
             label2.Name = "label2";
-            label2.Size = new Size(138, 20);
+            label2.Size = new Size(130, 21);
             label2.TabIndex = 4;
             label2.Text = "Enter the password:";
             // 
@@ -84,6 +90,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = SystemColors.InactiveCaption;
             ClientSize = new Size(800, 450);
             Controls.Add(label2);
             Controls.Add(label1);

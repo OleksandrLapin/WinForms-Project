@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace FileCombineProject
 {
-    public partial class MainMenu : Form
+    public partial class FormMainMenu : Form
     {
-        public MainMenu()
+        public FormMainMenu()
         {
             InitializeComponent();
         }
@@ -24,12 +24,16 @@ namespace FileCombineProject
             frm.ShowDialog();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnArchiver_Click(object sender, EventArgs e)
         {
+            FormArchiver archiver = new FormArchiver();
+            archiver.ShowDialog();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void btnRenamer_Click(object sender, EventArgs e)
         {
+            FormRenamer renamer = new FormRenamer();
+            renamer.ShowDialog();
         }
     }
 }
