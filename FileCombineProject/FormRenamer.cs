@@ -118,5 +118,15 @@ namespace FileCombineProject
 
             btnAnalyze_Click(sender, e);
         }
+
+        private void btnFilePatternsAdd_Click(object sender, EventArgs e)
+        {
+            listBoxFile.Items.Add(txtBoxFile.Text);
+        }
+
+        private void btnFilePatternsDelete_Click(object sender, EventArgs e)
+        {
+            listBoxFile.Items.Remove(listBoxFile.SelectedItem);
+        }
     }
 }

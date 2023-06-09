@@ -46,7 +46,7 @@
             checkBoxToTrash = new CheckBox();
             btnClear = new Button();
             folderBrowserDialog1 = new FolderBrowserDialog();
-            txtBoxDir = new TextBox();
+            txtBoxFIles = new TextBox();
             txtBoxFile = new TextBox();
             btnDirPatternsDelete = new Button();
             button2 = new Button();
@@ -215,13 +215,13 @@
             btnClear.UseVisualStyleBackColor = false;
             btnClear.Click += btnClear_Click;
             // 
-            // txtBoxDir
+            // txtBoxFIles
             // 
-            txtBoxDir.Location = new Point(1043, 113);
-            txtBoxDir.Name = "txtBoxDir";
-            txtBoxDir.ScrollBars = ScrollBars.Vertical;
-            txtBoxDir.Size = new Size(200, 27);
-            txtBoxDir.TabIndex = 12;
+            txtBoxFIles.Location = new Point(1043, 113);
+            txtBoxFIles.Name = "txtBoxFIles";
+            txtBoxFIles.ScrollBars = ScrollBars.Vertical;
+            txtBoxFIles.Size = new Size(200, 27);
+            txtBoxFIles.TabIndex = 12;
             // 
             // txtBoxFile
             // 
@@ -335,7 +335,7 @@
             Controls.Add(button2);
             Controls.Add(btnDirPatternsDelete);
             Controls.Add(txtBoxFile);
-            Controls.Add(txtBoxDir);
+            Controls.Add(txtBoxFIles);
             Controls.Add(btnClear);
             Controls.Add(checkBoxToTrash);
             Controls.Add(label3);
@@ -369,7 +369,7 @@
         private Button btnClear;
         private FolderBrowserDialog folderBrowserDialog1;
         private ImageList imageList1;
-        private TextBox txtBoxDir;
+        private TextBox txtBoxFIles;
         private TextBox txtBoxFile;
         private Button btnDirPatternsDelete;
         private Button button2;

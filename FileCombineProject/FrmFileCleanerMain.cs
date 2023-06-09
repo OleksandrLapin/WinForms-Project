@@ -128,7 +128,7 @@ namespace FileCombineProject.File_cleaner
 
         private void btnDirPatterns_Click(object sender, EventArgs e)
         {
-            listBoxDir.Items.Add(txtBoxDir.Text);
+            listBoxDir.Items.Add(txtBoxFIles.Text);
         }
 
         private void btnDirPatternsDelete_Click(object sender, EventArgs e)

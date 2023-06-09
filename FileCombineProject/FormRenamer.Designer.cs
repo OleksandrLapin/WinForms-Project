@@ -47,9 +47,9 @@
             imageList1 = new ImageList(components);
             DirBrowser = new FolderBrowserDialog();
             button1 = new Button();
-            btnDirPatternsDelete = new Button();
-            txtBoxDir = new TextBox();
-            btnDirPatternsAdd = new Button();
+            btnFilePatternsDelete = new Button();
+            txtBoxFile = new TextBox();
+            btnFilePatternsAdd = new Button();
             listBoxFile = new ListBox();
             SuspendLayout();
             // 
@@ -224,37 +224,40 @@
             button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click;
             // 
-            // btnDirPatternsDelete
+            // btnFilePatternsDelete
             // 
-            btnDirPatternsDelete.BackColor = Color.Green;
-            btnDirPatternsDelete.Font = new Font("Sitka Display", 9F, FontStyle.Italic, GraphicsUnit.Point);
-            btnDirPatternsDelete.ForeColor = Color.Black;
-            btnDirPatternsDelete.Location = new Point(794, 168);
-            btnDirPatternsDelete.Name = "btnDirPatternsDelete";
-            btnDirPatternsDelete.Size = new Size(121, 29);
-            btnDirPatternsDelete.TabIndex = 36;
-            btnDirPatternsDelete.Text = "Delete Dir Patterns";
-            btnDirPatternsDelete.UseVisualStyleBackColor = false;
+            btnFilePatternsDelete.BackColor = Color.Green;
+            btnFilePatternsDelete.Font = new Font("Sitka Display", 9F, FontStyle.Italic, GraphicsUnit.Point);
+            btnFilePatternsDelete.ForeColor = Color.Black;
+            btnFilePatternsDelete.Location = new Point(794, 168);
+            btnFilePatternsDelete.Name = "btnFilePatternsDelete";
+            btnFilePatternsDelete.Size = new Size(121, 29);
+            btnFilePatternsDelete.TabIndex = 36;
+            btnFilePatternsDelete.Text = "Delete File Patterns";
+            btnFilePatternsDelete.UseVisualStyleBackColor = false;
+            btnFilePatternsDelete.Click += btnFilePatternsDelete_Click;
             // 
-            // txtBoxDir
+            // txtBoxFile
             // 
-            txtBoxDir.Location = new Point(794, 81);
-            txtBoxDir.Name = "txtBoxDir";
-            txtBoxDir.ScrollBars = ScrollBars.Vertical;
-            txtBoxDir.Size = new Size(121, 27);
-            txtBoxDir.TabIndex = 35;
+            txtBoxFile.Font = new Font("Sitka Display", 9F, FontStyle.Italic, GraphicsUnit.Point);
+            txtBoxFile.Location = new Point(794, 81);
+            txtBoxFile.Name = "txtBoxFile";
+            txtBoxFile.ScrollBars = ScrollBars.Vertical;
+            txtBoxFile.Size = new Size(121, 26);
+            txtBoxFile.TabIndex = 35;
             // 
-            // btnDirPatternsAdd
+            // btnFilePatternsAdd
             // 
-            btnDirPatternsAdd.BackColor = Color.Green;
-            btnDirPatternsAdd.Font = new Font("Sitka Display", 9F, FontStyle.Italic, GraphicsUnit.Point);
-            btnDirPatternsAdd.ForeColor = Color.Black;
-            btnDirPatternsAdd.Location = new Point(794, 124);
-            btnDirPatternsAdd.Name = "btnDirPatternsAdd";
-            btnDirPatternsAdd.Size = new Size(121, 29);
-            btnDirPatternsAdd.TabIndex = 33;
-            btnDirPatternsAdd.Text = "Add Dir Patterns";
-            btnDirPatternsAdd.UseVisualStyleBackColor = false;
+            btnFilePatternsAdd.BackColor = Color.Green;
+            btnFilePatternsAdd.Font = new Font("Sitka Display", 9F, FontStyle.Italic, GraphicsUnit.Point);
+            btnFilePatternsAdd.ForeColor = Color.Black;
+            btnFilePatternsAdd.Location = new Point(794, 124);
+            btnFilePatternsAdd.Name = "btnFilePatternsAdd";
+            btnFilePatternsAdd.Size = new Size(121, 29);
+            btnFilePatternsAdd.TabIndex = 33;
+            btnFilePatternsAdd.Text = "Add File Patterns";
+            btnFilePatternsAdd.UseVisualStyleBackColor = false;
+            btnFilePatternsAdd.Click += btnFilePatternsAdd_Click;
             // 
             // listBoxFile
             // 
@@ -275,9 +278,9 @@
             BackColor = SystemColors.InactiveCaption;
             ClientSize = new Size(1028, 425);
             Controls.Add(listBoxFile);
-            Controls.Add(btnDirPatternsDelete);
-            Controls.Add(txtBoxDir);
-            Controls.Add(btnDirPatternsAdd);
+            Controls.Add(btnFilePatternsDelete);
+            Controls.Add(txtBoxFile);
+            Controls.Add(btnFilePatternsAdd);
             Controls.Add(button1);
             Controls.Add(combBxGPart);
             Controls.Add(combBxConnector);
@@ -315,9 +318,9 @@
         private ImageList imageList1;
         private FolderBrowserDialog DirBrowser;
         private Button button1;
-        private Button btnDirPatternsDelete;
-        private TextBox txtBoxDir;
-        private Button btnDirPatternsAdd;
+        private Button btnFilePatternsDelete;
+        private TextBox txtBoxFile;
+        private Button btnFilePatternsAdd;
         private ListBox listBoxFile;
     }
 }
